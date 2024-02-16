@@ -1,0 +1,45 @@
+/* App.css */
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.seating-arrangement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.booking-details {
+  margin-top: 20px;
+}
+
+.booking-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.booking-details li {
+  margin-bottom: 5px;
+}
