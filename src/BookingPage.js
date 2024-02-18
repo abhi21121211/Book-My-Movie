@@ -106,3 +106,49 @@ const BookingPage = () => {
 };
 
 export default BookingPage;
+
+
+
+
+
+// Function to generate sample show data
+const generateSampleShowData = () => {
+    const sampleData = {
+      showDates: ['2024-02-20', '2024-02-21', '2024-02-22'], // Sample show dates
+      showTimings: {
+        '2024-02-20': ['10:00 AM', '2:00 PM', '6:00 PM'], // Sample show timings for each date
+        '2024-02-21': ['11:00 AM', '3:00 PM', '7:00 PM'],
+        '2024-02-22': ['9:00 AM', '1:00 PM', '5:00 PM'],
+      },
+      availableSeats: {
+        '2024-02-20': {
+          '10:00 AM': 50, '2:00 PM': 30, '6:00 PM': 20 // Sample available seats for each show timing
+        },
+        '2024-02-21': {
+          '11:00 AM': 40, '3:00 PM': 25, '7:00 PM': 15
+        },
+        '2024-02-22': {
+          '9:00 AM': 55, '1:00 PM': 35, '5:00 PM': 18
+        }
+      }
+    };
+  
+    // Store sample data in localStorage
+    localStorage.setItem('showData', JSON.stringify(sampleData));
+  };
+  
+  // Function to get show data from localStorage
+  const getShowData = () => {
+    const storedData = localStorage.getItem('showData');
+    return storedData ? JSON.parse(storedData) : null;
+  };
+  
+  // Generate and store sample show data when needed
+  if (!localStorage.getItem('showData')) {
+    generateSampleShowData();
+  }
+  
+  // Example usage:
+  const showData = getShowData();
+  console.log(showData);
+  
