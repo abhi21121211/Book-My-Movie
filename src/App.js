@@ -6,6 +6,10 @@ import TicketBookingForm from './TicketBookingForm';
 import SeatSelector from './SeatSelector';
 import BookingDetails from './BookingDetails';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import HomePage from './HomePage';
+import MovieDetailsPage from './MovieDetailsPage';
+import BookingPage from './BookingPage';
 
 const App = () => {
   const [bookings, setBookings] = useState([]);
@@ -37,11 +41,15 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Book My Movie</h1>
-      <SeatingArrangementVisualization selectedSeats={selectedSeats} onSelectSeat={handleSeatSelect} />
-      <TicketBookingForm onSubmit={handleBookingSubmit} />
-      <BookingDetails bookings={bookings} totalSeats={totalSeats} />
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/movies/:movieId" element={<MovieDetailsPage />} />
+        <Route path="/movies/booking/:movieId" element={<BookingPage/>} />
+        
+      </Routes>
+    </Router>
+  </div>
   );
 };
 
