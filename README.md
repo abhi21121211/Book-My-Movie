@@ -16,10 +16,10 @@ my-app/
 │  ├─ ...
 
 ## Video Walkthrough of the project
-Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
+https://drive.google.com/file/d/17KXDSV_zU40dw6IpzG0b-stdiTAGOWrT/view?usp=sharing
 
 ## Video Walkthrough of the codebase
-Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
+https://drive.google.com/file/d/1gThitqlbjxBJkCqsatlupErUWq7IBZkk/view?usp=sharing
 
 ## Features
 - Browse available movies
